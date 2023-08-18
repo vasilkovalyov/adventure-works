@@ -13,7 +13,7 @@ import productsRoute from './routes/products'
   dotenv.config()
 
   server.use(bodyParser.json())
-  server.use(cors({ credentials: true, origin: process.env.API_URL }))
+  server.use(cors({ credentials: true, origin: 'http://localhost:3000' }))
   server.use(express.urlencoded({ extended: true }))
   server.use(compression())
   server.use(express.json())
